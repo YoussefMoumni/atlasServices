@@ -1,0 +1,23 @@
+{
+  "name": "atlas-maroc-capital-markets",
+  "version": "1.0.0",
+  "description": "Static promotional website for Atlas Maroc Capital Markets",
+  "type": "module",
+  "scripts": {
+    "dev": "npx http-server . -p 3000 -c-1",
+    "test": "npx playwright test",
+    "test:ui": "npx playwright test --ui",
+    "validate:html": "node tests/validate-html.js",
+    "validate:links": "node tests/validate-links.js",
+    "validate:accessibility": "node tests/validate-accessibility.js",
+    "validate:all": "npm run validate:html && npm run validate:links && npm run validate:accessibility && npm test"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.0",
+    "@playwright/test": "^1.48.0",
+    "html-validate": "^8.24.1"
+  },
+  "keywords": ["static", "html", "css", "promotional", "capital-markets"],
+  "author": "Atlas Maroc Capital Markets",
+  "license": "UNLICENSED"
+}
