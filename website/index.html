@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atlas Maroc Capital Markets | Service Portfolio</title>
+  <meta name="description" content="Explore the Atlas Maroc Capital Markets service portfolio through a polished promotional overview and dedicated service experiences." />
+  <style>
+    :root {
+      --bg: #07111f;
+      --panel: #0d1b2d;
+      --panel-2: #10243d;
+      --ink: #eff5fb;
+      --muted: #a5b6c9;
+      --line: rgba(255,255,255,.1);
+      --brand: #c8a96b;
+      --brand-soft: rgba(200,169,107,.14);
+      --accent: #63b3d1;
+      --max: 1180px;
+      --radius: 24px;
+      --shadow: 0 24px 60px rgba(0,0,0,.28);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: radial-gradient(circle at top right, rgba(99,179,209,.15), transparent 28%), linear-gradient(180deg, #08111d 0%, #091729 45%, #050c16 100%);
+      line-height: 1.6;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(calc(100% - 32px), var(--max)); margin: 0 auto; }
+    .site-header {
+      position: sticky; top: 0; z-index: 10;
+      backdrop-filter: blur(18px);
+      background: rgba(7,17,31,.75);
+      border-bottom: 1px solid var(--line);
+    }
+    .header-inner {
+      display: flex; justify-content: space-between; align-items: center;
+      gap: 24px; padding: 18px 0;
+    }
+    .brand { font-weight: 700; letter-spacing: .02em; }
+    .brand span { color: var(--brand); }
+    .nav-list { display: flex; flex-wrap: wrap; gap: 14px; list-style: none; padding: 0; margin: 0; }
+    .nav-list a {
+      padding: 10px 14px; border: 1px solid transparent; border-radius: 999px;
+      color: var(--muted); font-size: 14px;
+    }
+    .nav-list a:hover, .nav-list a:focus { border-color: var(--line); color: var(--ink); }
+    .hero { padding: 84px 0 40px; }
+    .eyebrow {
+      display: inline-flex; align-items: center; gap: 10px; margin: 0 0 18px;
+      padding: 8px 14px; border-radius: 999px; background: var(--brand-soft); color: var(--brand);
+      font-size: 13px; text-transform: uppercase; letter-spacing: .12em;
+    }
+    h1 {
+      margin: 0; font-size: clamp(2.8rem, 6vw, 5.3rem); line-height: 1.02; max-width: 11ch;
+      letter-spacing: -.04em;
+    }
+    .hero-grid {
+      display: grid; grid-template-columns: 1.3fr .9fr; gap: 32px; align-items: end;
+    }
+    .lead { max-width: 60ch; color: var(--muted); font-size: 1.1rem; margin: 22px 0 0; }
+    .hero-panel {
+      background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+      border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; box-shadow: var(--shadow);
+    }
+    .hero-panel h2 { margin: 0 0 10px; font-size: 1.1rem; }
+    .hero-panel p { margin: 0; color: var(--muted); }
+    .metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 20px; }
+    .metric {
+      padding: 16px; border-radius: 18px; background: rgba(255,255,255,.03); border: 1px solid var(--line);
+    }
+    .metric strong { display: block; font-size: 1.4rem; color: var(--brand); }
+    .metric span { color: var(--muted); font-size: .92rem; }
+    section { padding: 28px 0; }
+    .section-head { display: flex; justify-content: space-between; align-items: end; gap: 20px; margin-bottom: 24px; }
+    .section-head h2 { margin: 0; font-size: clamp(1.7rem, 3vw, 2.4rem); }
+    .section-head p { margin: 0; color: var(--muted); max-width: 58ch; }
+    .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .card {
+      padding: 24px; border-radius: 22px; background: linear-gradient(180deg, rgba(16,36,61,.96), rgba(9,23,41,.98));
+      border: 1px solid var(--line); box-shadow: var(--shadow);
+    }
+    .card h3 { margin: 14px 0 10px; font-size: 1.2rem; }
+    .card p { margin: 0; color: var(--muted); }
+    .kicker {
+      display: inline-block; padding: 6px 10px; border-radius: 999px; background: rgba(99,179,209,.12);
+      color: var(--accent); font-size: 12px; text-transform: uppercase; letter-spacing: .1em;
+    }
+    .feature-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 22px; }
+    .feature-box, .cta, .footer-panel {
+      border-radius: 26px; border: 1px solid var(--line); background: linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));
+      padding: 28px; box-shadow: var(--shadow);
+    }
+    .list { list-style: none; padding: 0; margin: 18px 0 0; display: grid; gap: 14px; }
+    .list li {
+      display: grid; grid-template-columns: 18px 1fr; gap: 12px; align-items: start; color: var(--muted);
+    }
+    .list li::before { content: "•"; color: var(--brand); font-size: 1.2rem; line-height: 1; }
+    .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+    .service-link {
+      display: block; padding: 22px; border-radius: 22px; border: 1px solid var(--line);
+      background: rgba(255,255,255,.025);
+    }
+    .service-link h3 { margin: 12px 0 10px; }
+    .service-link p { margin: 0 0 16px; color: var(--muted); }
+    .service-link span { color: var(--brand); font-weight: 600; }
+    .cta {
+      margin-top: 12px; display: grid; grid-template-columns: 1.2fr .8fr; gap: 20px; align-items: center;
+    }
+    .cta h2 { margin: 0 0 10px; font-size: clamp(1.8rem, 3vw, 2.6rem); }
+    .cta p { margin: 0; color: var(--muted); }
+    .cta-actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: flex-end; }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; padding: 14px 18px; border-radius: 999px;
+      border: 1px solid var(--line); min-width: 180px; font-weight: 600;
+    }
+    .btn.primary { background: var(--brand); color: #10151d; border-color: transparent; }
+    footer { padding: 28px 0 48px; }
+    .footer-panel { display: flex; justify-content: space-between; gap: 20px; align-items: center; }
+    .footer-panel p { margin: 0; color: var(--muted); }
+    @media (max-width: 980px) {
+      .hero-grid, .feature-grid, .cta { grid-template-columns: 1fr; }
+      .cards { grid-template-columns: 1fr 1fr; }
+      .cta-actions { justify-content: flex-start; }
+    }
+    @media (max-width: 720px) {
+      .header-inner, .section-head, .footer-panel { flex-direction: column; align-items: flex-start; }
+      .cards, .metrics, .services-grid { grid-template-columns: 1fr; }
+      .hero { padding-top: 56px; }
+      .nav-list { gap: 8px; }
+      .nav-list a { padding: 8px 12px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Atlas Maroc <span>Capital Markets</span></a>
+      <nav aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li><a href="index.html">Overview</a></li>
+          <li><a href="advisory.html">Advisory</a></li>
+          <li><a href="brokerage.html">Brokerage</a></li>
+          <li><a href="asset-management.html">Asset Management</a></li>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="capital-raising.html">Capital Raising</a></li>
+          <li><a href="trading.html">Trading</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Institutional service portfolio</p>
+          <h1>Capital markets expertise framed with clarity and confidence.</h1>
+          <p class="lead">This overview wireframe presents the Atlas Maroc Capital Markets service universe as a cohesive, premium experience. Each destination page is designed to communicate value quickly, support credibility-led storytelling, and guide visitors into a deeper understanding of a specific offer.</p>
+        </div>
+        <aside class="hero-panel" aria-label="Portfolio highlights">
+          <h2>High-fidelity design direction</h2>
+          <p>A restrained financial-services visual language, strong typography, layered surfaces, and structured promotional copy create a consistent foundation for all dedicated service pages.</p>
+          <div class="metrics">
+            <div class="metric"><strong>6</strong><span>Dedicated service pages</span></div>
+            <div class="metric"><strong>3</strong><span>Responsive breakpoints</span></div>
+            <div class="metric"><strong>1</strong><span>Unified design system</span></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>Shared page architecture</h2>
+          <p>Every service page follows the same conversion-friendly narrative: immediate service clarity, strategic benefits, market credibility, disciplined delivery, and a confident call to action.</p>
+        </div>
+        <div class="cards">
+          <article class="card">
+            <span class="kicker">Hero</span>
+            <h3>Service-first introduction</h3>
+            <p>The service name appears as the main title, followed by a concise promotional description that positions the offer in terms of relevance, trust, and outcomes.</p>
+          </article>
+          <article class="card">
+            <span class="kicker">Value</span>
+            <h3>Proof through structure</h3>
+            <p>Highlights, market perspective, and execution strengths are presented in clear blocks that reduce complexity and support investor-grade communication.</p>
+          </article>
+          <article class="card">
+            <span class="kicker">CTA</span>
+            <h3>Professional engagement cues</h3>
+            <p>Closing sections encourage contact and further discussion without relying on dynamic functionality, preserving the static HTML and CSS scope.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container feature-grid">
+        <div class="feature-box">
+          <div class="section-head" style="margin-bottom:0;">
+            <h2>Design principles carried across all pages</h2>
+          </div>
+          <ul class="list">
+            <li><div><strong style="color:var(--ink)">Clarity in under one screen:</strong> hero content explains the service before any scrolling is required on larger screens.</div></li>
+            <li><div><strong style="color:var(--ink)">Institutional tone:</strong> subdued colors, refined spacing, and disciplined sectioning reinforce seriousness and trust.</div></li>
+            <li><div><strong style="color:var(--ink)">Responsive readability:</strong> layouts collapse gracefully from desktop to mobile while preserving section hierarchy and CTA visibility.</div></li>
+            <li><div><strong style="color:var(--ink)">Reusable static implementation:</strong> every page can be built as a standalone HTML document with embedded or shared CSS patterns.</div></li>
+          </ul>
+        </div>
+        <div class="feature-box">
+          <div class="section-head" style="margin-bottom:0;">
+            <h2>Target visitor impression</h2>
+          </div>
+          <ul class="list">
+            <li><div>Atlas Maroc Capital Markets understands complex mandates and communicates them in a structured, confident manner.</div></li>
+            <li><div>Each service feels tailored while remaining part of a coherent institutional portfolio.</div></li>
+            <li><div>The experience is credible enough for clients, partners, and stakeholders reviewing the franchise at a glance.</div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <h2>Service page wireframes</h2>
+          <p>Each link below opens a self-contained HTML wireframe representing a dedicated promotional page for one Atlas Maroc Capital Markets service.</p>
+        </div>
+        <div class="services-grid">
+          <a class="service-link" href="advisory.html">
+            <span class="kicker">Service page</span>
+            <h3>Advisory</h3>
+            <p>Strategic guidance for issuers, investors, and corporate stakeholders navigating capital markets decisions.</p>
+            <span>Open wireframe →</span>
+          </a>
+          <a class="service-link" href="brokerage.html">
+            <span class="kicker">Service page</span>
+            <h3>Brokerage</h3>
+            <p>Market access presented through precision execution, relationship depth, and disciplined coverage.</p>
+            <span>Open wireframe →</span>
+          </a>
+          <a class="service-link" href="asset-management.html">
+            <span class="kicker">Service page</span>
+            <h3>Asset Management</h3>
+            <p>Portfolio stewardship oriented around conviction, allocation discipline, and long-term value creation.</p>
+            <span>Open wireframe →</span>
+          </a>
+          <a class="service-link" href="research.html">
+            <span class="kicker">Service page</span>
+            <h3>Research</h3>
+            <p>Actionable insights that turn market information into informed strategic perspectives.</p>
+            <span>Open wireframe →</span>
+          </a>
+          <a class="service-link" href="capital-raising.html">
+            <span class="kicker">Service page</span>
+            <h3>Capital Raising</h3>
+            <p>Funding strategies framed through investor positioning, transaction preparedness, and market timing.</p>
+            <span>Open wireframe →</span>
+          </a>
+          <a class="service-link" href="trading.html">
+            <span class="kicker">Service page</span>
+            <h3>Trading</h3>
+            <p>Execution capabilities highlighted through agility, liquidity awareness, and operational discipline.</p>
+            <span>Open wireframe →</span>
+          </a>
+        </div>
+        <div class="cta">
+          <div>
+            <h2>Designed for direct HTML and CSS implementation.</h2>
+            <p>The wireframes intentionally avoid framework patterns and backend assumptions, allowing downstream development to move directly from design into static page production.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn primary" href="advisory.html">Review first service page</a>
+            <a class="btn" href="trading.html">Review final service page</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-panel">
+      <div>
+        <strong>Atlas Maroc Capital Markets</strong>
+        <p>Design phase deliverable: overview wireframe and dedicated promotional service pages.</p>
+      </div>
+      <p>Static, responsive, and implementation-ready for HTML/CSS development.</p>
+    </div>
+  </footer>
+</body>
+</html>

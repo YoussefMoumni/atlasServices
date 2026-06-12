@@ -1,0 +1,51 @@
+/usr/local/lib/python3.12/site-packages/pytest_asyncio/plugin.py:299: PytestDeprecationWarning: The configuration option "asyncio_default_fixture_loop_scope" is unset.
+The event loop scope for asynchronous fixtures will default to the "fixture" caching scope. Future versions of pytest-asyncio will default the loop scope for asynchronous fixtures to "function" scope. Set the default fixture loop scope explicitly in order to avoid unexpected behavior in the future. Valid fixture loop scopes are: "function", "class", "module", "package", "session"
+
+  warnings.warn(PytestDeprecationWarning(_DEFAULT_FIXTURE_LOOP_SCOPE_UNSET))
+============================= test session starts ==============================
+platform linux -- Python 3.12.13, pytest-8.3.3, pluggy-1.6.0 -- /usr/local/bin/python3
+cachedir: .pytest_cache
+rootdir: /app
+configfile: pyproject.toml
+plugins: cov-7.1.0, asyncio-1.4.0, base-url-2.1.0, playwright-0.5.2, anyio-4.13.0, Faker-40.15.0, langsmith-0.7.36
+asyncio: mode=Mode.STRICT, debug=False, asyncio_default_fixture_loop_scope=None, asyncio_default_test_loop_scope=function
+collecting ... collected 36 items
+
+tests/test_accessibility.py::TestAccessibility::test_images_have_alt_text PASSED [  2%]
+tests/test_accessibility.py::TestAccessibility::test_links_have_accessible_text PASSED [  5%]
+tests/test_accessibility.py::TestAccessibility::test_form_inputs_have_labels PASSED [  8%]
+tests/test_accessibility.py::TestAccessibility::test_heading_hierarchy PASSED [ 11%]
+tests/test_accessibility.py::TestAccessibility::test_navigation_has_aria_label PASSED [ 13%]
+tests/test_accessibility.py::TestAccessibility::test_lists_properly_structured PASSED [ 16%]
+tests/test_accessibility.py::TestAccessibility::test_color_contrast_sufficient PASSED [ 19%]
+tests/test_accessibility.py::TestAccessibility::test_language_attribute_valid PASSED [ 22%]
+tests/test_css_validation.py::TestCSSValidation::test_css_variables_defined PASSED [ 25%]
+tests/test_css_validation.py::TestCSSValidation::test_responsive_breakpoints PASSED [ 27%]
+tests/test_css_validation.py::TestCSSValidation::test_minimal_inline_styles PASSED [ 30%]
+tests/test_css_validation.py::TestCSSValidation::test_font_stack_defined PASSED [ 33%]
+tests/test_css_validation.py::TestCSSValidation::test_color_consistency PASSED [ 36%]
+tests/test_css_validation.py::TestCSSValidation::test_box_sizing_set PASSED [ 38%]
+tests/test_css_validation.py::TestCSSValidation::test_responsive_units PASSED [ 41%]
+tests/test_css_validation.py::TestDesignConsistency::test_consistent_css_across_pages PASSED [ 44%]
+tests/test_css_validation.py::TestDesignConsistency::test_consistent_layout_classes PASSED [ 47%]
+tests/test_html_validation.py::TestHTMLValidation::test_html_files_exist PASSED [ 50%]
+tests/test_html_validation.py::TestHTMLValidation::test_html5_validity PASSED [ 52%]
+tests/test_html_validation.py::TestHTMLValidation::test_doctype_present PASSED [ 55%]
+tests/test_html_validation.py::TestHTMLValidation::test_html_lang_attribute PASSED [ 58%]
+tests/test_html_validation.py::TestHTMLValidation::test_charset_meta_present PASSED [ 61%]
+tests/test_html_validation.py::TestHTMLValidation::test_viewport_meta_present PASSED [ 63%]
+tests/test_html_validation.py::TestHTMLValidation::test_title_present PASSED [ 66%]
+tests/test_html_validation.py::TestHTMLValidation::test_single_h1_per_page PASSED [ 69%]
+tests/test_html_validation.py::TestHTMLValidation::test_no_empty_links PASSED [ 72%]
+tests/test_html_validation.py::TestHTMLValidation::test_semantic_html5_structure PASSED [ 75%]
+tests/test_html_validation.py::TestContentStructure::test_navigation_present PASSED [ 77%]
+tests/test_html_validation.py::TestContentStructure::test_brand_logo_present PASSED [ 80%]
+tests/test_html_validation.py::TestContentStructure::test_consistent_navigation_links PASSED [ 83%]
+tests/test_link_validation.py::TestLinkValidation::test_internal_links_valid PASSED [ 86%]
+tests/test_link_validation.py::TestLinkValidation::test_no_duplicate_ids PASSED [ 88%]
+tests/test_link_validation.py::TestLinkValidation::test_anchor_links_valid PASSED [ 91%]
+tests/test_link_validation.py::TestLinkValidation::test_cross_page_references PASSED [ 94%]
+tests/test_link_validation.py::TestNavigationConsistency::test_all_service_pages_linked_from_index PASSED [ 97%]
+tests/test_link_validation.py::TestNavigationConsistency::test_brand_logo_links_to_home PASSED [100%]
+
+============================== 36 passed in 1.50s ==============================
